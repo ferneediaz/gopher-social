@@ -1,0 +1,56 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output of build process
+*.out
+
+# Go-specific files
+*.test        # Test binaries
+*.exe         # Executable files
+*.log         # Log files
+*.prof        # Profiling data
+*.trace       # Trace files
+*.bench       # Benchmark results
+
+# Vendor directory (remove if you are not using Go modules)
+vendor/
+
+# Dependency directories for Go modules and vendored dependencies
+go.sum
+go.mod
+
+# IDE/editor specific files
+.idea/
+*.iml
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Go workspace specific files
+*.env
+
+# Compiled binary and object files
+*.o
+*.a
+*.out
+
+# Build directories and executables
+bin/
+build/
+dist/
+
+# Coverage files
+*.cover
+coverage.out
