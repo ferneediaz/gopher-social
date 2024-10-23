@@ -44,6 +44,6 @@ func (app *application) run(mux http.Handler) error {
 		ReadTimeout:  time.Second * 10,
 		IdleTimeout:  time.Minute,
 	}
-	log.Printf("server has started ay %s", app.config.addr)
+	log.Printf("server has started at %s", app.config.addr)
 	return srv.ListenAndServe()
 }

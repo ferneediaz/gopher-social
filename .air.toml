@@ -26,7 +26,8 @@ tmp_dir = "bin"
   rerun_delay = 500
   send_interrupt = false
   stop_on_error = false
-
+  env = ["ADDR"]
+  include_system_envs = true
 [color]
   app = ""
   build = "yellow"
