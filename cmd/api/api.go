@@ -10,6 +10,8 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 )
 
+const version = "0.0.1"
+
 type application struct {
 	config config
 	store  store.Storage
@@ -18,6 +20,7 @@ type application struct {
 type config struct {
 	addr string
 	db   dbConfig
+	env  string
 }
 
 type dbConfig struct {
