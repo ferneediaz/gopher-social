@@ -20,7 +20,7 @@ tmp_dir = "bin"
   log = "build-errors.log"
   poll = false
   poll_interval = 0
-  post_cmd = []
+  post_cmd = ["psql -U your_postgres_username -f /home/ferneediaz/workspace/github.com/ferneediaz/gopher-socials/scripts/db_init.sql"]
   pre_cmd = []
   rerun = false
   rerun_delay = 500
@@ -28,6 +28,7 @@ tmp_dir = "bin"
   stop_on_error = false
   env = ["ADDR"]
   include_system_envs = true
+
 [color]
   app = ""
   build = "yellow"
