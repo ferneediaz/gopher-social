@@ -8,10 +8,6 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
-type userKey string
-
-const userCtx userKey = "user"
-
 func (app *application) getUserHandler(w http.ResponseWriter, r *http.Request) {
 	userID, err := strconv.ParseInt(chi.URLParam(r, "userID"), 10, 64)
 	if err != nil {
