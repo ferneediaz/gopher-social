@@ -4,15 +4,15 @@ Gopher Socials API is a backend service for the Gopher Socials platform, providi
 
 ## Table of Contents
 
-- Features
-- Architecture
-- Installation
-- Usage
-- API Documentation
-- Database Migrations
-- Seeding the Database
-- Contributing
-- License
+- [Features](#features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Database Migrations](#database-migrations)
+- [Seeding the Database](#seeding-the-database)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
@@ -27,6 +27,7 @@ Gopher Socials API is a backend service for the Gopher Socials platform, providi
 
 The project is structured as follows:
 
+```
 .
 ├── cmd/
 │   └── api/
@@ -59,47 +60,66 @@ The project is structured as follows:
 ├── go.mod
 ├── go.sum
 └── .air.toml
+```
 
 ## Installation
 
 1. **Clone the repository:**
 
+    ```sh
+    git clone https://github.com/ferneediaz/gopher-socials.git
+    cd gopher-socials
+    go mod download
+    ```
+
+2. **Setup Environment Variables:**
+
+    Create a `.env` file based on the `.envrc` template with the necessary environment variables.
+
+3. **Build the project:**
+
+    ```sh
+    make build
+    ```
+
+## Usage
+
+### Running the API
+
+Start the API server using Air for live reloading:
+
 ```sh
-   git clone https://github.com/ferneediaz/gopher-socials.git
-   ```
-cd gopher-socials
-
-go mod download
-
-## Setup Environment Variables:
-
-Create a .env file based on the .envrc template with the necessary environment variables.
-```
-make build
-```
-## Running the API
-Start the API server using Air for live reloading
-```
 air
 ```
-## Running Database Migrations
-```
+
+### Running Database Migrations
+
+```sh
 make migrate-up
 ```
-## Create a new migration:
 
-```
+### Create a new migration
+
+```sh
 make migrate-create <migration_name>
 ```
-##Rollback the last migration:
-```
+
+### Rollback the last migration
+
+```sh
 make migrate-down
 ```
-## Seeding database 
-```
+
+### Seeding the Database
+
+```sh
 make seed
 ```
-## API DOCUMENTATION
+
+## API Documentation
+
+Access the API documentation at:
+
 ```
 http://localhost:3000/swagger/index.html
 ```
